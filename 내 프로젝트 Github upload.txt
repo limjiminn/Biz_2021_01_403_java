@@ -1,0 +1,32 @@
+내 프로젝트 Github upload
+	
+1. github repository 생성
+	https;//github.com/limjiminn접속
+	new repository
+
+2. local 폴더 repository 선언
+=local repository 만들기
+	local폴더에서 git bash here
+
+	git init
+
+3. config 설정
+=local repositary와
+	remote repositary의 권한 보안설정
+
+	git config --local user.name limjiminn
+	git config --local user.email jiaezzan@naver.com
+
+4. remote 설정
+=upload 할 remote repositary주소 별명 설정
+	(github 홈페이지에 있음)/복사하려면  shift + Insert
+	
+	git remote add origin https://github.com/limjiminn/Biz_2021
+
+* github 업로드 금지 설정하기
+로컬 폴더에 .gitignore 파일 생성
+touch .gitignore(리눅스 명령어) > .gitignore폴더가 생김
+
+5. 파일 add
+6. commit 설정
+7. push
