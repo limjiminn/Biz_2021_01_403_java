@@ -25,8 +25,23 @@
 
 * github 업로드 금지 설정하기
 로컬 폴더에 .gitignore 파일 생성
-touch .gitignore(리눅스 명령어) > .gitignore폴더가 생김
+	touch .gitignore(리눅스 명령어) 
+	업로드 금지 목록작성
 
 5. 파일 add
+
+	git add .(.: 현재 폴더에있는 모든것)
+
+	=현재 폴더의 모든 파일,폴더를 upload 하기위해 압축하라
+
 6. commit 설정
+	현재 시점에 업로드한 정보의 comment를 설정하는 것
+
+	git commit -m first
+
 7. push
+
+	git push -u origin master
+
+
+	
