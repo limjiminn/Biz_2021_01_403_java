@@ -23,6 +23,12 @@
 * config 하기 : clone 한 한번만 수행
 	git config --global user.name limjiminn
 	git config --global user.email jiaezzan@naver.com
+
+5. 힉원에 와서 제일 먼저 할 일
+	프로젝트 폴더에서 git bash 열기
+
+	git pull(매우중요) : 동기화 하기
+	
 * 프로젝트 압축 및 upload
 	git add .
 	git commit -m "집에서 HelloHomework 클래스만들기"
