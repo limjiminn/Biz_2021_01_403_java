@@ -37,7 +37,7 @@ public class Var_01 {
 		num1 = num1 - 20;//변수 num1에 num1값과 20을 뺀후 저장하라
 		num1 = num1 / 2;
 		num1 = num1 * 2;
-		num1 = num1 % 2;  //0또는 1이나온다. 짝소or 홀수
+		num1 = num1 % 2;  //0또는 1이나온다. 짝수or 홀수
 		
 		num1 = num1 + (-1); //-1 //교대로 사용할때 사용하는코드(=스위치를만든다)
 		num1 = num1 * (-1); //1
