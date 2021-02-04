@@ -1,4 +1,5 @@
 # vi editor
+* 리눅스환경에 가장많이 사용하는 편집기
 * vi : Visual Editor 라는 이름에서 유래
 * vi_editor는 linux환경에서 가장 많이 사용되는 
 Text 편집기(editor), 윈도우의 메모장 위드패드 등과 같이 Text 문서를 만드는 도구
