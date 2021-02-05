@@ -1,6 +1,6 @@
 package com.callor.start.logic;
 
-public class logic_02 {
+public class Logic_02 {
 	
 	public static void main(String[] args) {
 		
