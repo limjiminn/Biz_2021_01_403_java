@@ -25,7 +25,8 @@ public class Odd_Even_01 {
 		System.out.println("1부터 100까지 짝수의 합 = " + sum);
 		
 	
-		sum = 0;
+	
+		
 		for(int i = 0; i < 100; i++) {
 			
 			if( i % 2 == 1) {
