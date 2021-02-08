@@ -7,17 +7,18 @@ public class Odd_Even_01 {
 		int sum = 0;
 		
 		// 0~99
-		
+		//even 짝수  //odd 홀수
 		for(int i = 0; i < 100; i++) {
 			
 			// 1 ~ 100
-					
-			boolean bYes = (i+1) % 2 == 0;
+			int num = i + 1;
+			
+			boolean bYes = num % 2 == 0;
 
 			// 만약 byes true 이면
 			if (bYes) {
 				// 값을 변수에 계속 더하라
-				sum += i+1;							
+				sum += num;							
 			}
 			
 		}
@@ -26,15 +27,31 @@ public class Odd_Even_01 {
 	
 		for(int i = 0; i < 100; i++) {
 			
-			if((i + 1) % 2 == 1) {
+			int num = i + 1;
+			
+			if(num % 2 == 1) {
 				
-				sum += i + 1;
+				sum += num;
 					
 			}
 		}
 		System.out.println("1부터 100까지 홀수의 합 = " + sum);
 		
-		
+		// 위에서 선언하고 사용했던 변수를 "재 사용" 하기
+		// 반드시 초기화(clear) 해야한다.
+		int intSumOdd = 0;
+		for(int i = 0; i < 100 ; i++) {
+			int num = i + 1;
+			boolean bYes = num % 2 == 0;
+			
+			//if( bYes == false) {
+			// bYes가 true가 아니면
+			if( !bYes) {
+				intSumOdd += num ;
+				
+			}
+		}
+			System.out.println("홀수의 합 : " + intSumOdd);
 			
 			
 	}
