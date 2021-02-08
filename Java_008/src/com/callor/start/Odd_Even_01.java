@@ -7,11 +7,11 @@ public class Odd_Even_01 {
 		
 		int sum = 0;
 		
-		// 0~99	// 7 ~ 106
+		// 0~99
 		
 		for(int i = 0; i < 100; i++) {
 			
-			// 1 ~ 100	1
+			// 1 ~ 100
 					
 			boolean bYes = (i+1) % 2 == 0;
 
@@ -29,9 +29,9 @@ public class Odd_Even_01 {
 		
 		for(int i = 0; i < 100; i++) {
 			
-			if( i % 2 == 1) {
+			if((i + 1) % 2 == 1) {
 				
-				sum += i;
+				sum += i + 1;
 					
 			}
 		}
