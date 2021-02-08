@@ -31,8 +31,7 @@ public class Odd_Even_01 {
 			if( i % 2 == 1) {
 				
 				sum += i;
-				
-				
+					
 			}
 		}
 		System.out.print("1부터 100까지 홀수의 합 = " + sum);
