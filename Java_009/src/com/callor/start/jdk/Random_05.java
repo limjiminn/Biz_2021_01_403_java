@@ -10,7 +10,7 @@ public class Random_05 {
 
 		int sum2M = 0;
 
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 100; i++) { 
 
 			int num = rnd.nextInt(100) + 1;
 
