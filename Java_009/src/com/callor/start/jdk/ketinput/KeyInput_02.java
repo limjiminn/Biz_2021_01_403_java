@@ -1,4 +1,4 @@
-package com.callor.start.jdk;
+package com.callor.start.jdk.ketinput;
 
 import java.util.Scanner;
 

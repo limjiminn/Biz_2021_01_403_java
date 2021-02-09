@@ -1,4 +1,4 @@
-package com.callor.start.jdk;
+package com.callor.start.random;
 
 import java.util.Random;
 

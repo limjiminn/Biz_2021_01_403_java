@@ -1,4 +1,4 @@
-package com.callor.start.jdk;
+package com.callor.start.random;
 
 /*
  * Copy & Understand, Past (뭔지알고 붙여라)
