@@ -34,7 +34,7 @@ public class LopingGame {
 				break;
 			}
 			
-			if(keyNum) {
+			if(keyNum == rndNum) {
 				System.out.println( "You Win!!!!");
 				break;
 			}else if(keyNum  > rndNum ) {
