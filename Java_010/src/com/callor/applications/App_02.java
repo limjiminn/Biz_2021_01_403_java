@@ -7,22 +7,25 @@ public class App_02 {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("숫자입력 >>");
+		System.out.print("숫자입력 >> ");
 		int num = scan.nextInt();
 
-		System.out.println("=========================");
-		System.out.println("구구단 " + num + "단");
-		System.out.println("-------------------------");
+		boolean bYes = num > 1 && num < 10;
 
-		boolean bYes = num < 1 && num > 10;
-		if (bYes) {
+		if (!bYes) {
 			System.out.println("경고");
-			// break;
+		} else {
+
+			System.out.println("=========================");
+			System.out.println("구구단 " + num + "단");
+			System.out.println("-------------------------");
+
 			for (int i = 0; i < 8; i++) {
 				int num1 = i + 2;
 				System.out.println(num + " x " + num1 + " = " + (num * num1));
 			}
+		
+		System.out.println("=========================");
 		}
-
 	}
 }
