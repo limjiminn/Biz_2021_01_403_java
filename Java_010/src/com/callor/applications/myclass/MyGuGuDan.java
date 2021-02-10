@@ -32,6 +32,11 @@ public class MyGuGuDan {
 
 	}// gugu() end
 	
+	// print() method는 변수 선언명령문을 포함하고 있다
+	// 누군가가 MyGuGuDan.print()를 호출(실행)하려면
+	// 반드시 정수값을 하나 포함시켜줘야 한다.
+	// MyGuGuDan.print(정수) 이런식으로 호출해야 한다.
+	// () 안에 포함되는 값을 arguments 라고 한다.
 	public void print(int dan) {  
 		
 		System.out.println("======================");
