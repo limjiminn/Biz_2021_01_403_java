@@ -19,8 +19,8 @@ public class ScoreServiceV2 {
 	 * 		method의 ()안에서 선언된 변수들..
 	 * 여기에서는 intKor,intEng,intMath
 	 * 
-	 * 누군가 print() method 를 호출하면서 국어, 영어, 수학 점수(값)을 주입하면
-	 * 그 값을 받을 변수(바구니)
+	 *누군가 print() method 를 호출하면서 국어, 영어, 수학 점수(값)을
+	 *  주입하면그 값을 받을 변수(바구니)
 	 * 
 	 * 만약 객체.print(3,6,8) 형식으로 호출을 하면
 	 * int intKor = 3. int intEng = 6, int intMath = 8 처럼
