@@ -14,6 +14,12 @@ public class Score_03 {
 		// 정수 99, 88, 77을 전달한다.
 		scServiceV2.sum(99,88,77);
 		
+		//sum() method에는 3의 정수형 매개변수가 선언되어 있다.
+		//sum() method를 호출할때 3개 미만이거나, 3개보다 많은 값을
+		// 전달하면 문법오류가 난다.
+		//scServiceV2.sum();
+		//scServiceV2.sum(1, 2, 3, 4);
+		
 	}
 
 }
