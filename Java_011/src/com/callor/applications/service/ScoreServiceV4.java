@@ -24,15 +24,15 @@ public class ScoreServiceV4 {
 		 */
 		float Avg = sum / 3F;
 		
-		System.out.println("==============================================");
+		System.out.println("==========================================");
 		System.out.println("국어\t영어\t수학\t총점\t평균");
-		System.out.println("----------------------------------------------");
+		System.out.println("------------------------------------------");
 		System.out.print(intKor + "\t");
 		System.out.print(intEng + "\t");
 		System.out.print(intMath + "\t");
 		System.out.print(sum + "\t");
 		System.out.println(Avg + "\t"); //이렇게하면 깔끔해짐
-		System.out.println("==============================================");
+		System.out.println("==========================================");
 	}
 
 }
