@@ -1,6 +1,7 @@
 package com.callor.applications.service;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /*
  * service : 메인메소드가 없고 메인메소드에서 생성하고 호출해줘야함
@@ -16,6 +17,8 @@ public class ClassServiceV2 {
 	 */
 	private Random rnd = new Random();
 	private int sum = 0;
+	private Scanner scan = new Scanner(System.in);
+	
 	//
 	public void for_1() {
 		//sum1: (메소드) 지역 변수 : for_1 메소드가 끝나면 소멸
@@ -50,6 +53,10 @@ public class ClassServiceV2 {
 	}	
 	//곱셈
 	public void times() {
+		/*
+		 * num1 과 num2 는 add() method에도 선언되어있지만
+		 * 선언된 method 가 다르므로 이름만 같을뿐 전혀다른 변수다.
+		 */
 		int num1 = rnd.nextInt(100) + 1;
 		int num2 = rnd.nextInt(100) + 1;
 		
@@ -63,6 +70,15 @@ public class ClassServiceV2 {
 	}
 	//나눗셈
 	public void division() {
+		
+		int num1 = scan.nextInt();
+		int num2 = scan.nextInt();
+		
+		System.out.print(num1);
+		System.out.print(" / ");
+		System.out.print(num2);
+		System.out.print(" = ");
+		System.out.print(num1 / num2);
 		
 	}
 	//뺼셈
