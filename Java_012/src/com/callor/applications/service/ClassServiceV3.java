@@ -51,6 +51,7 @@ public class ClassServiceV3 {
 		System.out.printf(" %d + %d = %d\n", intNum1, intNum2, intNum1 + intNum2);
 		System.out.printf(" %d - %d = %d\n", intNum1, intNum2, intNum1 - intNum2);
 		System.out.printf(" %d / %d = %d\n", intNum1, intNum2, intNum1 / intNum2);
+		
 	}
-
+	
 }
