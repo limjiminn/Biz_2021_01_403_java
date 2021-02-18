@@ -68,9 +68,36 @@ public class ClassServiceV2 {
 		System.out.println(result);
 		
 	}
+	//효율적인 스캐너 이용법은 인스턴스변수를 만드는것이다.
+	//스캐너를 실행하면 키보드가있는지 확인하고 
+	//그걸 연결시키는 과정이생기고 키보드 입력
+	//을 기다린다. 입력을하면 연결이 끊어진다.(비효율적)
+	public void input() {
+		/*
+		 * Scanner를 지역변수로 선언했을때
+		 * 
+		 * input() method가 호출될때마다
+		 * 키보드 입력을 받기위해
+		 * Scanner클래스를 객체 만들고
+		 * 사용이 끝나면 연결을 해제(끊는)하는
+		 * 과정이 계속 반복된다
+		 */
+		Scanner scan1 = new Scanner(System.in);
+		int num1 = scan.nextInt();
+	}
 	//나눗셈
 	public void division() {
-		
+		// 이미연결이 된상태에서 키보드 연결/끊기 작업이 없다.(효율적)
+		/*
+		 * Scanner를 scan 인스턴스 변수로 선언
+		 * 
+		 * 현재 클래스(ClassServiceV2)가 객체로 선언되고
+		 * 인스턴스로 만들어 질때 1번만 키보드에 연결된다
+		 * 필요에 따라 키보드 입력을 기다리는 
+		 * nextInt() 메서드를 자유롭게 사용가능하다.
+		 * 
+		 * 비용(Cost)적 측면에서 intput() method 보다는 다소 효율적이다.
+		 */
 		int num1 = scan.nextInt();
 		int num2 = scan.nextInt();
 		

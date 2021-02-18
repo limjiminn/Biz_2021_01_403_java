@@ -11,6 +11,7 @@ public class Class_02 {
 		csV2.add();
 		csV2.sum();
 		csV2.times();
+		csV2.division();
 	}
 
 }
