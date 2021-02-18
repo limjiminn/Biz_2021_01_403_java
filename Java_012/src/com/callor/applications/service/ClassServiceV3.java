@@ -27,6 +27,12 @@ public class ClassServiceV3 {
 		intNum1 = scan.nextInt();
 		System.out.print("2번째 입력 : ");
 		intNum2 = scan.nextInt();
+		
+		/*
+		 * method 선언명령문에 void 키워드가 있으면 
+		 * 이 위치에 return 명령문이 있는 것과 같다ㅓ
+		 */
+		
 	}
 
 	public void algebra() {
