@@ -23,14 +23,42 @@ public class IntegerEx_01 {
 		String str2 = "22";
 		System.out.println("str1 : " + str1);
 		System.out.println("str2 : " + str2);
-		System.out.println(str1 + str2);
+		System.out.println(str1 + str2); //문자열을 연결하는 연산
 		
-		
-		int num1 = Integer.valueOf(str1);
-		int num2 = Integer.valueOf(str2);
+		//문자열형숫자(str1 담긴 값)을
+		//정수로 변환하여 return하고
+		//정수형변수 num1에 저장한다.
+		int num1 = Integer.valueOf(str1); // 문자열 11을 숫자 11로 변환
+		int num2 = Integer.valueOf(str2); //문자열 22를 숫자 22로 변환
 		System.out.println("num1 : " + num1);
 		System.out.println("num2 : " + num2);
-		System.out.println(num1 + num2);
+		System.out.println(num1 + num2); //사칙연산
+		
+		//문자열형 숫자를 정수로 바꾸어서 사칙연산을
+		//할수있게 만들어준다.
+		int  num3 = Integer.valueOf("30");  //정수 30
+		num3 =Integer.valueOf("03");		//정수 3
+		num3 =Integer.valueOf("300");		//정수 300
+		
+		System.out.println(num3 * 3);  // 900
+		
+		//문자열형숫자를 정수형으로 바꿀때
+		//발생하는 오류 상황들
+		
+		//NumberFormatException
+		//문자열형 숫자를 정수로 변환하려고 했더니
+		//얼마(숫자)로 변환해야 할지 알수 없다
+		
+		//문자열중에 빈칸이 있는경우
+		num3 = Integer.valueOf("3 ");
+		//문자열중에 숫자형이 아닌 문자열이 있는경우
+		num3 = Integer.valueOf("3A");
+		num3 = Integer.valueOf("3 3");
+		num3 = Integer.valueOf("A3");
+		num3 = Integer.valueOf("3+3");
+		num3 = Integer.valueOf("+3+");
+		
+		
 		
 	}
 
