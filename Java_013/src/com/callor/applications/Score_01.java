@@ -15,8 +15,9 @@ public class Score_01 {
 		//int num = scV1,input();		
 		
 		scV1.input();
+		scV1.sum();
+		scV1.avg();
 		scV1.print();
-		
 	}
 
 }
