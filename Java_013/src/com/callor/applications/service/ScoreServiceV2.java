@@ -18,7 +18,15 @@ public class ScoreServiceV2 {
 	private float floatAvg;
 
 	public void input() {
-		
+		/*
+		 * public String nextLine() {
+		 * 	return 키보드에서 입력받은 문자열;
+		 * }
+		 * 
+		 * 키보드를 통해서 문자열을 입력받기 위해서는
+		 *	Scanner.nextLine() 메서드를 실행하고
+		 *	return 값을 문자열변수에 저장한다
+		 */
 		System.out.println("학생이름을 입력하세요");
 		System.out.print("이름 >>");
 		strName = scan.nextLine();
