@@ -2,13 +2,13 @@ package com.callor.applications;
 
 import com.callor.applications.service.ScoreServiceV1;
 
+//학생수, 학생,성적을 직접입력하는 코드
 public class Score_06 {
 
 	public static void main(String[] args) {
 
+		ScoreServiceV1 ssV1 = new ScoreServiceV1();
 
-		ScoreServiceV1 ssV1 = new  ScoreServiceV1();
-		
 		ssV1.init();
 		ssV1.inputNames();
 		ssV1.inputScore();
