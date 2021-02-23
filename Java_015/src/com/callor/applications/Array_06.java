@@ -1,10 +1,35 @@
 package com.callor.applications;
 
+import java.util.Scanner;
+
 public class Array_06 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		
+		int[] intNums = new int[100];
+		
+		for(int i = 0 ; i < intNums.length ; i++) {
+			
+		}
+		Scanner scan = new Scanner(System.in);
+		System.out.println("정수 1 ~ 10 중에 입력");
+		System.out.print(">>  ");
+		int keyNum = scan.nextInt();
+		
+		int pos = 0;
+		for(pos = 0; pos < intNums.length ; pos++) {
+			if(intNums[pos] == keyNum) {
+				break;
+			}
+		}
+		if(pos < intNums.length) {
+			System.out.println(pos + "위치에서 최초 발견");
+			
+		}else {
+			System.out.println("배열에 찾은 값이 없음");
+		}
+	
 	}
 
 }

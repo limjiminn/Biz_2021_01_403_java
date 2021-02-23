@@ -14,15 +14,7 @@ public class Prime_01 {
 
 		// 변수에 저장한 정수가 소수 인가를 판별하여 출력
 
-		for (int i = 2; i < num; i++) {
-
-			boolean bYes = num % i == 0;
-
-			if (bYes) {
-				System.out.println("소수가 아니다");
-				break;
-			}
-		}
+		
 
 		int pos = 0;
 		for (pos = 2; pos < num; pos++) {
@@ -34,9 +26,11 @@ public class Prime_01 {
 		System.out.println(pos);
 		// for 반복문이 중간에 break 되면
 		// 항상 pos < num 관계가 된다.
-		// for 반복문이 break 없이 모두 완료 되었으면
+
 		if (pos < num) {
 			System.out.println(num + "는 소수가 아님");
+			
+		// for 반복문이 break 없이 모두 완료 되었으면
 		} else {
 			System.out.println(num + "는 소수임");
 		}
