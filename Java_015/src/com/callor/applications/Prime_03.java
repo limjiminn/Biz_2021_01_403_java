@@ -14,7 +14,9 @@ public class Prime_03 {
 		System.out.print("숫자입력 >> ");
 		int num = scan.nextInt();
 		
+		//return 을 썻을땐 변수를 사용하여야한다.
 		int result =psV2.prime(num);
+		//result 값은 num값( num or -1) 이므로 if문에서 판결난다.
 		if(result < 0) {
 			System.out.println(num + "는 소수가 아님");
 		}else {
