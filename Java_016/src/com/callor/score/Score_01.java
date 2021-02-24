@@ -27,9 +27,6 @@ public class Score_01 {
 
 		Random rnd = new Random();
 
-		
-		
-
 		// 점수 생성
 		for (int i = 0; i < strName.length; i++) {
 			intKor[i] = rnd.nextInt(100) + 1;
@@ -45,19 +42,18 @@ public class Score_01 {
 		}
 		// 평균
 		for (int i = 0; i < strName.length; i++) {
-			floatAvg[i] = (float)intSum[i] / 3;
+			floatAvg[i] = (float) intSum[i] / 3;
 
 		}
 		System.out.println("===========================================================");
 		System.out.println("이름\t주소\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("-----------------------------------------------------------");
-		
-		for(int i = 0 ; i < strName.length; i++) {
-			System.out.printf("%s\t%s\t%d\t%d\t%d\t%d\t%3.2f\n",strName[i],strAddr[i],intKor[i],intEng[i],intMath[i],intSum[i],floatAvg[i]);
-			
+
+		for (int i = 0; i < strName.length; i++) {
+			System.out.printf("%s\t%s\t%d\t%d\t%d\t%d\t%3.2f\n", strName[i], strAddr[i], intKor[i], intEng[i],
+					intMath[i], intSum[i], floatAvg[i]);
+
 		}
 		System.out.println("===========================================================");
 	}
-	}
-
 }
