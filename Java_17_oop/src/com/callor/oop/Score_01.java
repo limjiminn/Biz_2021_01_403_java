@@ -6,32 +6,40 @@ import com.callor.oop.model.ScoreVO;
 
 public class Score_01 {
 
-	public static void main(String[] args) {
+	ScoreVO scoreVO = new ScoreVO();
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println("=======================");
+	System.out.println("성적입력 시스템 v1");
+	System.out.println("=======================");
 
-		ScoreVO scoreVO = new ScoreVO();
-		Scanner scan = new Scanner(System.in);
-
-		// 50 ~ 100점 까지만 입력가능
-		try {
-			while(true) {
-			System.out.print("국어점수 >> ");
-			scoreVO.intKor = scan.nextInt();
-			if((scoreVO.intKor< 50)||(scoreVO.intKor > 100)) {
-			}else
-			System.out.print("영어점수 >> ");
-			scoreVO.intEng = scan.nextInt();
-			if((scoreVO.intEng> 50)&&(scoreVO.intEng < 100)) {
-
-			System.out.print("수학점수 >> ");
-			scoreVO.intMath = scan.nextInt();
-			if((scoreVO.intMath> 50)&&(scoreVO.intMath < 100)) {
-				
-			
+	while(true) {
+		System.out.println("학생 이름을 입력하세요");
+		System.out.print(">> ");
+		String strName = scan.nextLine();
+		scoreVO.strName = strName;
+		
+		while(true) {
+			System.out.println("국어점수를 입력하세요");
+			System.out.print(">> ");
+			String strKor = scan.nextLine();
+			try {
+				int intKor = Integer.valueOf(strKor);
+				scoreVO.intKor = intKor;
+				break;
+			} catch (Exception e) {
+				System.out.println("국어점수는 숫자로만 입력");
+				continue;
 			}
-		} catch (Exception e) {
-			System.out.println("");
 		}
 
-	}
+		System.out.println("영어점수를 입력하세요");
+		System.out.print(">> ");
+		String strEng = scan.nextLine();
 
-}
+		System.out.println("수학점수를 입력하세요");
+		System.out.print(">> ");
+		String strMath = scan.nextLine();
+		
+	} // end while
+		}}
