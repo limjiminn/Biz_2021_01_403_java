@@ -2,13 +2,15 @@ package com.callor.score;
 
 import java.util.Random;
 
+import com.callor.score.model.ScoreVO;
+
 
 
 public class Score_06 {
 	
 	public static void main(String[] args) {
 		
-		ScoreVO scoreVO = new ScoreVO[10];
+		ScoreVO[] scoreVO = new ScoreVO[10];
 		for(int i= 0; i < scoreVO.length; i++) {
 			scoreVO[i] = new ScoreVO();
 		}
@@ -16,9 +18,9 @@ public class Score_06 {
 		Random rnd = new Random();
 		
 		for(int i = 0; i < scoreVO.length ; i ++) {
-			scoreVO[i].inKor = rnd.nextInt(100) + 1;
-			scoreVO[i].inEng = rnd.nextInt(100) + 1;
-			scoreVO[i].inMath = rnd.nextInt(100) + 1;
+			scoreVO[i].intKor = rnd.nextInt(100) + 1;
+			scoreVO[i].intEng = rnd.nextInt(100) + 1;
+			scoreVO[i].intMath = rnd.nextInt(100) + 1;
 		}
 		
 		System.out.println("==========================");
@@ -27,17 +29,18 @@ public class Score_06 {
 		for(int i = 0; i < scoreVO.length ; i ++) {
 			
 			int sum = scoreVO[i].intKor;
-			sum += scoreVO[i].inEng;
-			sum += scoreVO[i].inMath;
+			sum += scoreVO[i].intEng;
+			sum += scoreVO[i].intMath;
 			
 			float floatAvg =(float)sum / 3;
 			
 			System.out.printf("%d\t%d\t%d\t%d\t%3.2f\n",
 					scoreVO[i].intKor,
-					scoreVO[i].inEng,
-					scoreVO[i].inMath,
+					scoreVO[i].intEng,
+					scoreVO[i].intMath,
 					sum, floatAvg);
 		}
+		System.out.println("--------------------------");
 	}
 	
 

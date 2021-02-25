@@ -27,6 +27,7 @@ public class ScoreVO {
 	public int intKor;
 	public int intEng;
 	public int intMath;
+	
 	public int intMusic;
 	public int intHistory;
 	
