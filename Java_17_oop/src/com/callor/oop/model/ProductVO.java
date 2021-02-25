@@ -71,8 +71,8 @@ public class ProductVO {
 		System.out.printf("매출단가 : %d\n", this.oPrice);
 		System.out.println("===============================");
 		
-		return "";
-		
+		//return "";
+		return null; 
 	}
 
 
