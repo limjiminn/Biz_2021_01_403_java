@@ -34,7 +34,46 @@ public class ProductVO {
 	public int iPrice;
 	//매출단가
 	public int oPrice;
-
+	
+	
+	/*
+	 * java 에서는 class를 선언하면 public String toString() 
+	 * 메서드가 자동으로 생성된다
+	 * 하지만 기본적으로 코든느 보이지 않는다
+	 * 
+	 * toString() 메서드는 객체를 생성했을때 어떤클래스를 사용했는지와
+	 * 	생성된 객체가 컴퓨터 기억장치의 어떤 곳(주소)에 만들어져 저장되어
+	 * 	있는지 알려주는 코드가 담겨있다. 
+	 * 
+	 * java코딩에서 toString() 메서드의 기본역할은 크게필요하지않다.
+	 * 
+	 * 그래서 일반적으로 VO클래스를 만들떄는 임의로 
+	 * toString()메서드를 "다시 만들어준다"
+	 * 그리고 인스턴스 변수에 입력된 값을 알려주는 디버깅 코드를
+	 * 생성한다
+	 * 
+	 * 메서드의 재정의 (메소드 오버라이딩)
+	 * (자바가) 자동으로 만들어져있는 toString()을 개발자가
+	 * 임의로 다시 만들었다.
+	 * 
+	 * 원래 java 자동으로 생성한 코드는 감춰진다.
+	 * 
+	 */
+	public String toString() {
+		System.out.println("===============================");
+		System.out.println("입력된 데이터 확인");
+		System.out.println("-------------------------------");
+		System.out.printf("상품코드 : %s\n", this.strPCode);
+		System.out.printf("상품명 : %s\n", this.strPName);
+		System.out.printf("품목명 : %s\n", this.strItem);
+		System.out.printf("거래처 : %s\n", this.strDName);
+		System.out.printf("매입단가 : %d\n", this.iPrice);
+		System.out.printf("매출단가 : %d\n", this.oPrice);
+		System.out.println("===============================");
+		
+		return "";
+		
+	}
 
 
 }
