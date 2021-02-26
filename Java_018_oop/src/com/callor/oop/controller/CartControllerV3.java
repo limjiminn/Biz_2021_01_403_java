@@ -22,14 +22,15 @@ public class CartControllerV3 {
 		
 		cartVO = new CartVO();
 		System.out.print("구매자 이름 >> ");
-		//String userName = scan.nextLine());
+		String userName = scan.nextLine();
 			
 		System.out.print("상품명 >> ");
 		String pName =scan.nextLine();
 		
 		System.out.print("수량 >> ");
-		cartVO.setCartQty(scan.nextInt());
-		String count = scan.nextLine();
+		String strCount = scan.nextLine();
+		int intCount = Integer.valueOf(strCount);
+		
 		System.out.print("가격 >> ");
 		//3000이라고 입력하면 "3000"으로 입력되어
 		//문자열이다
@@ -37,10 +38,12 @@ public class CartControllerV3 {
 		// "3000"문자열형 숫자를 정수 3000으로 변경하여
 		// intPrice 변수에 저장
 		int intPrice = Integer.valueOf(price);
-		//cartVO.setCartUserName(userName);
+		
+			//cartList.add(i)
+		cartVO.setCartUserName(userName);
 		cartVO.setCartName(pName);
-		cartVO.setCartQty(scan.nextInt());
-		cartVO.setCartPrice(scan.nextInt());
+		cartVO.setCartQty(intCount);
+		cartVO.setCartPrice(intPrice);
 		}
 		
 
