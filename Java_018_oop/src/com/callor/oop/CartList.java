@@ -49,6 +49,7 @@ public class CartList {
 				cartVO.getCartName(),
 				cartVO.getCartPrice(),
 				cartVO.getCartQty());
+		
 		for(int i = 0; i < 2; i++ ) {
 			cartVO = cartList.get(i);
 			System.out.printf("%s\t%s\t%d\t%d\n",
