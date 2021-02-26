@@ -1,4 +1,4 @@
-package comm.callor.oop.model;
+package com.callor.oop.model;
 
 /*
  * 쇼핑카트에 필요한 데이터 항목들

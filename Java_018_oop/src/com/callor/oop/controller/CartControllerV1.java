@@ -1,6 +1,6 @@
-package comm.callor.oop.controller;
+package com.callor.oop.controller;
 
-import comm.callor.oop.model.CartVO;
+import com.callor.oop.model.CartVO;
 
 /*
  * Controller 클래스

@@ -1,13 +1,13 @@
-package comm.callor.oop.controller;
+package com.callor.oop.controller;
 
-import comm.callor.oop.model.CartVO;
+import com.callor.oop.model.CartVO;
 
 public class CartControllerV2 {
 
 	public static void main(String[] args) {
-		
+		//배열 지정
 		CartVO[] cartVO = new CartVO[3];
-		
+		//배열을 변수에 저장해야한다.
 		cartVO[0] = new CartVO();
 		cartVO[0].setCartUserName("홍길동");
 		cartVO[0].setCartDate("2021-02-26");
@@ -43,6 +43,20 @@ public class CartControllerV2 {
 		cartVO[2].setCartTotal(2000 * 10);
 		
 		System.out.println(cartVO[2].toString());
+		//=====cartVO의 개수가 3인 상태
+		//상품한가지를 더 카트에 넣고싶다
+		cartVO = new CartVO[4];  //전에 만들어놨던 배열은 사라진다.
+		
+		cartVO[3] = new CartVO();
+		cartVO[3].setCartUserName("홍길동");
+		cartVO[3].setCartName("바나나우유");
+		
+		System.out.println("=======================");
+		System.out.println("카트 내용");
+		System.out.println("-----------------------");
+		for(int i = 0; i < cartVO.length ; i ++) {
+			System.out.println(cartVO[i].toString());
+		}
 	}
 
 }
