@@ -12,9 +12,10 @@ package com.callor.oop.model;
  * 구매금액
  */
 public class CartVO {
-	//인스턴스 변수의 은닉화
+
+	// 인스턴스 변수의 은닉
 	private String cartUserName;
-	private String cartName;
+	private String cartPName;
 	private String cartStd;
 	private String cartDate;
 	private String cartTime;
@@ -22,9 +23,9 @@ public class CartVO {
 	private int cartPrice;
 	private int cartTotal;
 	
-	//private으로 은닉된 인스턴스 변수에
+	// private으로 은닉된 인스턴스 변수에
 	// 값을 저장, 읽기 하기 위한 용도의
-	//getter(), setter() method 선언
+	// getter(), setter() method 선언
 	
 	public String getCartUserName() {
 		return cartUserName;
@@ -32,11 +33,11 @@ public class CartVO {
 	public void setCartUserName(String cartUserName) {
 		this.cartUserName = cartUserName;
 	}
-	public String getCartName() {
-		return cartName;
+	public String getCartPName() {
+		return cartPName;
 	}
-	public void setCartName(String cartName) {
-		this.cartName = cartName;
+	public void setCartPName(String cartPName) {
+		this.cartPName = cartPName;
 	}
 	public String getCartStd() {
 		return cartStd;
@@ -74,17 +75,11 @@ public class CartVO {
 	public void setCartTotal(int cartTotal) {
 		this.cartTotal = cartTotal;
 	}
+	
 	@Override
 	public String toString() {
-		return "CartVO [cartUserName=" + cartUserName + ", cartName=" + cartName + ", cartStd=" + cartStd
+		return "CartVO [cartUserName=" + cartUserName + ", cartPName=" + cartPName + ", cartStd=" + cartStd
 				+ ", cartDate=" + cartDate + ", cartTime=" + cartTime + ", cartQty=" + cartQty + ", cartPrice="
 				+ cartPrice + ", cartTotal=" + cartTotal + "]";
 	}
-	
-	
-
-	
-	
-	
-
 }

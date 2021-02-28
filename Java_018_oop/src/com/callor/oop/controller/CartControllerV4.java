@@ -9,6 +9,7 @@ import com.callor.oop.model.CartVO;
 public class CartControllerV4 {
 
 	public static void main(String[] args) {
+		
 		List<CartVO> cartList = new ArrayList<CartVO>();
 		Scanner scan = new Scanner(System.in);
 
@@ -41,8 +42,9 @@ public class CartControllerV4 {
 					}
 				} catch (Exception e) {
 					System.out.println("수량은 숫자로 입력하세요");
-					continue;
+					
 				}
+				break;
 
 			}
 
@@ -59,14 +61,14 @@ public class CartControllerV4 {
 					}
 				} catch (Exception e) {
 					System.out.println("수량은 숫자로 입력하세요");
-					continue;
+					
 				}
 				break;
 
 			}
 			CartVO cartVO = new CartVO();
 			cartVO.setCartUserName(strUerName);
-			cartVO.setCartName(strPName);
+			cartVO.setCartPName(strPName);
 			cartVO.setCartPrice(intPrice);
 			cartVO.setCartQty(intQty);
 
@@ -78,8 +80,11 @@ public class CartControllerV4 {
 
 		int nSize = cartList.size(); // 갯수를 세서 변수에 저장
 		for (int i = 0; i < nSize; i++) {
-			System.out.printf("%s\t%s\t%d\t%d\n", cartList.get(i).getCartUserName(), cartList.get(i).getCartName(),
-					cartList.get(i).getCartPrice(), cartList.get(i).getCartQty());
+			System.out.printf("%s\t%s\t%d\t%d\n", 
+					cartList.get(i).getCartUserName(),
+					cartList.get(i).getCartPName(),
+					cartList.get(i).getCartPrice(),
+					cartList.get(i).getCartQty());
 		}
 		System.out.println("====================================");
 	}
