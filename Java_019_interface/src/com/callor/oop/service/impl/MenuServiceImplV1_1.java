@@ -2,15 +2,16 @@ package com.callor.oop.service.impl;
 
 import java.util.Scanner;
 
-public class MenuServiceImplV1_1 {
+import com.callor.oop.service.MenuService;
+
+public class MenuServiceImplV1_1 implements MenuService {
 	/*
 	 * 인스턴스 객체변수 선언
 	 * 생성자에서 객체변수 초기화하여 사용할 준비
 	 */
 	private Scanner scan;
-	
 	public MenuServiceImplV1_1() {
-		scan = Scanner(System.in);
+		scan = new Scanner(System.in);
 	}
 	
 
@@ -23,7 +24,7 @@ public class MenuServiceImplV1_1 {
 			System.out.println("1. 카트추가");
 			System.out.println("2. 카트삭제");
 			System.out.println("3. 카트리스트");
-			System.out.println("Q. 끝내기");
+			System.out.println("QUIT. 끝내기");
 			System.out.println("-----------------------------------");
 			
 			while (true) {
@@ -31,7 +32,7 @@ public class MenuServiceImplV1_1 {
 				String strMenu = scan.nextLine();
 				
 				//1. Q를 입력하면 끝내기
-				if(strMenu =="Q") {
+				if(strMenu.equals("QUIT")) {
 					System.out.println("끝내기");
 					return;
 				}
