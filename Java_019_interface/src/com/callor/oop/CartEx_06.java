@@ -5,7 +5,7 @@ import com.callor.oop.service.MenuService;
 import com.callor.oop.service.impl.CartserviceImplV4;
 import com.callor.oop.service.impl.MenuServiceImplV3;
 
-public class Cart_06 {
+public class CartEx_06 {
 
 	public static void main(String[] args) {
 		

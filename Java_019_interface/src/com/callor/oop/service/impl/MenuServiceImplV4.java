@@ -12,40 +12,10 @@ public class MenuServiceImplV4 implements MenuService {
 		
 		scan = new Scanner(System.in);
 	}
-	
-	/*
-	 * 메뉴를 보여주고 선택된 메뉴에 따라 카트에
-	 * 추가, 삭제 하거나 리스트를 보여줘야한다.
-	 * 이 기능을 MenuService에서 구현하는것이 아니라
-	 * selectMent()를 호출한 곳에서 구현을 해야 한다.
-	 * 
-	 * 호출한 곳에서 selectMenu() 결과에 따라
-	 * 		기능을 수행하려면
-	 * 사용자가 메뉴를 보고 선택을 했을때
-	 * 선택된 결과값을 호출한 곳에 return해줘야 한다.
-	 * 
-	 * 이렇게 설계를 변경하려면 method를 void type 이 아닌 int나 String 등
-	 * 다른 type으로 변경해야한다.
-	 * 클래승 method를 변경하려면 interface 부터 변경하고, interface를 impl...한
-	 * 모든 클래스를 다 변경해야 한다.
-	 * 
-	 * interface, class의 원형을 변경하지않고 현재 method에만 어떤 기능을 추가하고자한다.
-	 * 
-	 * 별도로 menuItem 변수를 하나 선언하고 이 변수값으로 선택된 메뉴를 알수있도록 하겠다.
-	 * 
-	 */
-	
+	//메뉴선택하면 선택한 항목번호가 저장될 변수
 	public Integer menuItem = null;
 	
-	/*
-	 * 메뉴를 확인한 후 사용자가 메뉴를 선택하면
-	 * menuItem 에 적절한 값을 담고
-	 * return를 수행하도록 코드를 구현했다
-	 * 
-	 * 
-	 * QUIT 선택하면 menuItem = null
-	 * 1 ~ 3중에서 선택하면 menuITem = 선택한 숫자
-	 */
+	
 	public void selectMenu() {
 		
 		while(true) {

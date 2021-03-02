@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 import com.callor.oop.service.MenuService;
 
-public class MenuServiceImplV1_1 implements MenuService {
+public class MenuServiceImplV2 implements MenuService {
 	/*
 	 * 인스턴스 객체변수 선언
 	 * 생성자에서 객체변수 초기화하여 사용할 준비
 	 */
 	private Scanner scan;
-	public MenuServiceImplV1_1() {
+	public MenuServiceImplV2() {
 		scan = new Scanner(System.in);
 	}
 	
