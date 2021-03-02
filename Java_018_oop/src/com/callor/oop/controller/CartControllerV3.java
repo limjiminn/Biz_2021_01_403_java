@@ -16,11 +16,14 @@ public class CartControllerV3 {
 		//키보드를 통해 카트에 추가할
 		//구매자이름, 상품명, 수량, 가격를 입력
 		Scanner scan = new Scanner(System.in);
-		CartVO cartVO = new CartVO();
 		
 		for(int i = 0; i < 3; i++) {
+			
+		System.out.println("=============================");
+		System.out.println("쇼핑카트 추가");
+		System.out.println("-----------------------------");
 		
-		cartVO = new CartVO();
+		//입력받기
 		System.out.print("구매자 이름 >> ");
 		String userName = scan.nextLine();
 			
@@ -39,25 +42,31 @@ public class CartControllerV3 {
 		// intPrice 변수에 저장
 		int intPrice = Integer.valueOf(price);
 		
-			//cartList.add(i)
+		
+		//카트 정보 생성
+		CartVO cartVO = new CartVO();
 		cartVO.setCartUserName(userName);
-		cartVO.setCartName(pName);
+		cartVO.setCartPName(pName);
 		cartVO.setCartQty(intCount);
 		cartVO.setCartPrice(intPrice);
-		}
+		
+		//카트 정보 리스트에 추가하기
+		cartList.add(cartVO);
+		}// end for
 		
 
 		//cartList에 출력
 		System.out.println("==================================");
 		System.out.println("장바구니 테스트");
 		System.out.println("----------------------------------");
-		for(int i = 3; i < 3; i ++) {
-		cartVO = cartList.get(i);
+		
+		int nSize = cartList.size();
+		for(int i = 0; i < nSize; i ++) {
 		System.out.printf("%s\t%s\t%d\t%d\n" ,
-				cartVO.getCartUserName(),
-				cartVO.getCartName(),
-				cartVO.getCartQty(),
-				cartVO.getCartPrice());
+				cartList.get(i).getCartUserName(),
+				cartList.get(i).getCartPName(),
+				cartList.get(i).getCartQty(),
+				cartList.get(i).getCartPrice());
 		}
 		
 		

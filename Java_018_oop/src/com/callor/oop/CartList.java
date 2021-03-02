@@ -13,8 +13,8 @@ public class CartList {
 		List<CartVO> cartList = new ArrayList<CartVO>();
 		
 		CartVO cartVO = new CartVO();
-		cartVO.setCartName("홍길동");
-		cartVO.setCartName("초코파이");
+		cartVO.setCartUserName("홍길동");
+		cartVO.setCartPName("초코파이");
 		cartVO.setCartPrice(1000);
 		cartVO.setCartQty(10);
 		
@@ -22,8 +22,8 @@ public class CartList {
 		cartList.add(cartVO);
 		
 		cartVO = new CartVO();
-		cartVO.setCartName("홍길동");
-		cartVO.setCartName("칠성사이다");
+		cartVO.setCartUserName("홍길동");
+		cartVO.setCartPName("칠성사이다");
 		cartVO.setCartPrice(2500);
 		cartVO.setCartQty(1);
 		
@@ -38,23 +38,23 @@ public class CartList {
 		
 		cartVO = cartList.get(0);
 		System.out.printf("%s\t%s\t%d\t%d\n",
-				cartVO.getCartName(),
-				cartVO.getCartName(),
+				cartVO.getCartUserName(),
+				cartVO.getCartPName(),
 				cartVO.getCartPrice(),
 				cartVO.getCartQty());
 		
 		cartVO = cartList.get(1);
 		System.out.printf("%s\t%s\t%d\t%d\n",
-				cartVO.getCartName(),
-				cartVO.getCartName(),
+				cartVO.getCartUserName(),
+				cartVO.getCartPName(),
 				cartVO.getCartPrice(),
 				cartVO.getCartQty());
 		
 		for(int i = 0; i < 2; i++ ) {
 			cartVO = cartList.get(i);
 			System.out.printf("%s\t%s\t%d\t%d\n",
-					cartVO.getCartName(),
-					cartVO.getCartName(),
+					cartVO.getCartUserName(),
+					cartVO.getCartPName(),
 					cartVO.getCartPrice(),
 					cartVO.getCartQty());
 			

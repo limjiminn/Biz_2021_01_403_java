@@ -9,7 +9,7 @@ import com.callor.oop.model.CartVO;
 public class CartControllerV4 {
 
 	public static void main(String[] args) {
-		
+		//CartVO 객체를 담을 cartList 리스트를 생성
 		List<CartVO> cartList = new ArrayList<CartVO>();
 		Scanner scan = new Scanner(System.in);
 
@@ -27,7 +27,8 @@ public class CartControllerV4 {
 			// 유효성 검사
 			// 1이상 정수
 			/*
-			 * 데이터를 키보드에서 입력받는 부분과 VO에 담아 리스트에 추가하는 부분을 분리하여 코딩할 경우 키보드에 입력한 값을 정수변환하여 값을
+			 * 데이터를 키보드에서 입력받는 부분과 VO에 담아 리스트에 
+			 * 추가하는 부분을 분리하여 코딩할 경우 키보드에 입력한 값을 정수변환하여 값을
 			 * 담아둘 intQty 변수를 while() 실행 이전에 선언해 두어야 한다.
 			 */
 			int intQty = 0;
@@ -61,7 +62,7 @@ public class CartControllerV4 {
 					}
 				} catch (Exception e) {
 					System.out.println("수량은 숫자로 입력하세요");
-					
+						
 				}
 				break;
 

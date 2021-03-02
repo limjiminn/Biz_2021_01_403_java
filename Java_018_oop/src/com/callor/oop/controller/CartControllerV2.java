@@ -12,7 +12,7 @@ public class CartControllerV2 {
 		cartVO[0].setCartUserName("홍길동");
 		cartVO[0].setCartDate("2021-02-26");
 		cartVO[0].setCartTime("10:44:00");
-		cartVO[0].setCartName("초코파이");
+		cartVO[0].setCartPName("초코파이");
 		cartVO[0].setCartQty(10);
 		cartVO[0].setCartStd("바나나맛");
 		cartVO[0].setCartPrice(1000);
@@ -24,7 +24,7 @@ public class CartControllerV2 {
 		cartVO[1].setCartUserName("이몽룡");
 		cartVO[1].setCartDate("2021-02-26");
 		cartVO[1].setCartTime("11:30:00");
-		cartVO[1].setCartName("엄마손파이");
+		cartVO[1].setCartPName("엄마손파이");
 		cartVO[1].setCartQty(5);
 		cartVO[1].setCartStd("오리지날");
 		cartVO[1].setCartPrice(1200);
@@ -36,7 +36,7 @@ public class CartControllerV2 {
 		cartVO[2].setCartUserName("성춘향");
 		cartVO[2].setCartDate("2021-02-26");
 		cartVO[2].setCartTime("12:00:00");
-		cartVO[2].setCartName("포카칩");
+		cartVO[2].setCartPName("포카칩");
 		cartVO[2].setCartQty(10);
 		cartVO[2].setCartStd("김치맛");
 		cartVO[2].setCartPrice(2000);
@@ -49,7 +49,7 @@ public class CartControllerV2 {
 		
 		cartVO[3] = new CartVO();
 		cartVO[3].setCartUserName("홍길동");
-		cartVO[3].setCartName("바나나우유");
+		cartVO[3].setCartPName("바나나우유");
 		
 		System.out.println("=======================");
 		System.out.println("카트 내용");

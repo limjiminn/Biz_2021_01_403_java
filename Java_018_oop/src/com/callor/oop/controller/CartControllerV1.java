@@ -12,10 +12,11 @@ public class CartControllerV1 {
 	public static void main(String[] args) {
 		
 		CartVO cartVO = new CartVO();
+		
 		cartVO.setCartUserName("홍길동");
 		cartVO.setCartDate("2021-02-26");
 		cartVO.setCartTime("10:44:00");
-		cartVO.setCartName("초코파이");
+		cartVO.setCartPName("초코파이");
 		cartVO.setCartQty(10);
 		cartVO.setCartStd("바나나맛");
 		cartVO.setCartPrice(1000);
