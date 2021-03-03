@@ -8,7 +8,7 @@ public class CartEx_01 {
 	 * Cart Project 에서 CartServiceV1을 사용하여
 	 * cart 기능을 구현했다.
 	 * 
-	 * Cart Projext 사용하아는 중에
+	 * Cart Project 사용하아는 중에
 	 * 		CartService 기능을 업그레이드 해야할 일이
 	 * 		발생했다
 	 * 		CartServiceV1을 그대로 두고

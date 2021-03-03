@@ -47,6 +47,7 @@ public class CartServiceV1 implements CartService {
 				System.out.println("단가는 정수로 입력해주세요");
 			}
 		}
+		
 		while (true) {
 			System.out.print("수량 >> ");
 			String strQty = scan.nextLine();

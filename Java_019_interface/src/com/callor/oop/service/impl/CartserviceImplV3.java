@@ -74,6 +74,7 @@ public class CartserviceImplV3 implements CartService {
 				}
 			}
 			//카트에 저장
+			
 			CartVO cartVO = new CartVO();
 			
 			cartVO.setUserName(strUserName);
@@ -81,6 +82,7 @@ public class CartserviceImplV3 implements CartService {
 			cartVO.setQty(intQty);
 			cartVO.setPrice(intPrice);
 			cartVO.setTotal(intPrice * intQty);
+			
 			cartList.add(cartVO);
 
 		}
