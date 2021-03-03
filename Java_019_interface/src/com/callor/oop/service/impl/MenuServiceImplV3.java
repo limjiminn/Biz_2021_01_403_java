@@ -17,7 +17,7 @@ public class MenuServiceImplV3 implements MenuService {
 	 * 메뉴를 보여주고 선택된 메뉴에 따라 카트에
 	 * 추가, 삭제 하거나 리스트를 보여줘야한다.
 	 * 이 기능을 MenuService에서 구현하는것이 아니라
-	 * selectMent()를 호출한 곳에서 구현을 해야 한다.
+	 * selectMenu()를 호출한 곳에서 구현을 해야 한다.
 	 * 
 	 * 호출한 곳에서 selectMenu() 결과에 따라
 	 * 		기능을 수행하려면

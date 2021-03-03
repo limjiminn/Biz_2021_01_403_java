@@ -8,20 +8,23 @@ import com.callor.shop.service.impl.MenuServiceV1;
 public class CartEx_01 {
 
 	public static void main(String[] args) {
-		
+		//MenuServiceV1을 사용하여 코드구현
 		MenuService mService = new MenuServiceV1();
+		//CartServiceV1을 사용하여 코드구현
 		CartService cService = new CartServiceV1();
-		
-		while(true) {
-			String menu = mService.selectMenu();
-			if(menu.equals("가")) {
+
+		while (true) {
+			Integer intMenu = mService.selectMenu();
+			if(intMenu == null) {
+				break;	
+			}else if (intMenu == 1) {
 				cService.inputCart();
-			}else if(menu.equals("나")) {
+			} else if (intMenu == 2) {
 				cService.printCart();
-			}else if(menu.equals("다")) {
+			} else if (intMenu == 3) {
 				cService.userCart();
 			}
-			
+
 		}
 	}
 

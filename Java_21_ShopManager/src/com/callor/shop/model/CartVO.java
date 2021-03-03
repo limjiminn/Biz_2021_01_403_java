@@ -1,7 +1,7 @@
 package com.callor.shop.model;
 
 public class CartVO {
-	
+	//장바구니에 상품을 추가합니다.
 	private String userName;
 	private String productName;
 	private String date;
