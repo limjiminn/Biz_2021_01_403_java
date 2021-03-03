@@ -9,7 +9,7 @@ public class CartVO {
 	private int qty;
 	private int price;
 	private int total;
-	
+	//
 	public String getUserName() {
 		return userName;
 	}
