@@ -9,7 +9,7 @@ import com.callor.shop.service.CartService;
 
 // 장바구니에 담긴 상품의 리스트
 public class CartServiceV1 implements CartService {
-
+	//cartList와 scan 인스턴스 객체변수를 선언
 	private List<CartVO> cartList;
 	private Scanner scan;
 
@@ -19,6 +19,8 @@ public class CartServiceV1 implements CartService {
 	private int qty;
 
 	public CartServiceV1() {
+		//인스턴스 객체변수를 
+		// 클래스 생성자에서 초기화
 		cartList = new ArrayList<CartVO>();
 		scan = new Scanner(System.in);
 	}
@@ -62,7 +64,7 @@ public class CartServiceV1 implements CartService {
 				System.out.println("수량은 정수로 입력해주세요");
 			}
 		}
-
+		
 		CartVO cartVO = new CartVO();
 		cartVO.setUserName(userName);
 		cartVO.setProductName(productName);
