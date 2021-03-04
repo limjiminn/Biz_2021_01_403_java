@@ -36,9 +36,10 @@ public class MenuServiceImplV1 implements MenuService {
 					Values.MENU_ALL_LIST);
 			System.out.printf("%d. 구매자별 장바구니 보기\n",
 					Values.MENU_USER_LIST);
+			
 			System.out.println("QUIT. 업무종료");
 			System.out.println(Values.sLine);
-			System.out.println("선택 >> ");
+			System.out.print("선택 >> ");
 			String strMenu = scan.nextLine();
 			if (strMenu.equals("QUIT")) {
 				System.out.println("업무종료");
@@ -63,7 +64,7 @@ public class MenuServiceImplV1 implements MenuService {
 			if (intMenu >= Values.MENU_START && intMenu <= Values.MENU_LAST) {
 				return intMenu;
 			}else {
-				System.out.println("업무는 %d ~ %d 까지 중에서 선택",
+				System.out.printf("업무는 %d ~ %d 까지 중에서 선택",
 						Values.MENU_START, Values.MENU_LAST);
 			}
 

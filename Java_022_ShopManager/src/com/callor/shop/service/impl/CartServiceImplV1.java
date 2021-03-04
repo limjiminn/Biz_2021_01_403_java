@@ -34,10 +34,11 @@ public class CartServiceImplV1 implements CartService {
 		String strProductName = scan.nextLine();
 
 		System.out.println("추가할 상품의 구매 수량을 입력하세요");
-
 		Integer intQty = 0;
 		while (true) {
-			System.out.println(">> ");
+			
+
+			System.out.print(">> ");
 			String strQty = scan.nextLine();
 			try {
 				intQty = Integer.valueOf(strQty);
@@ -51,18 +52,18 @@ public class CartServiceImplV1 implements CartService {
 			}
 
 		}
-
+		System.out.println("추가할 상품의 구매 가격을 입력하세요");
 		Integer intPrice = 0;
 		while (true) {
-			System.out.println(">> ");
+			System.out.print(">> ");
 			String strPrice = scan.nextLine();
 			try {
-				intPrice = Integer.valueOf(strprice);
+				intPrice = Integer.valueOf(strPrice);
 			} catch (Exception e) {
-				System.out.println("수량은 숫자만 입력하세요");
+				System.out.println("가격은 숫자만 입력하세요");
 			}
 			if (intPrice < 1) {
-				System.out.println("수량은 1이상 입력하세요");
+				System.out.println("가격은 1이상 입력하세요");
 			} else {
 				break;
 			}
@@ -92,9 +93,11 @@ public class CartServiceImplV1 implements CartService {
 		System.out.printf("합계 : %d\n",
 				cartVO.getTotal());
 		System.out.println(Values.dLine);
+		
 		System.out.println("추가할까요 (Yes)?");
 		String strYesNo = scan.nextLine();
-		if(strYesNo.equals("YES")) {
+		
+		if(strYesNo.equals("Yes")) {
 			cartList.add(cartVO);
 			System.out.println("저장완료!!");
 		} else {
@@ -103,15 +106,71 @@ public class CartServiceImplV1 implements CartService {
 		
 	}
 
+	/*
+	 * private 으로 선언된 method는
+	 * 현재 클래스에서만 호출이 가능한 method
+	 */
+	private void printHeader() {
+		System.out.println(Values.dLine);
+		System.out.println("구매자\t상품명\t단가\t수량\t금액");
+		System.out.println(Values.sLine);
+	}
+	
+	private void printBody(CartVO cartVO) {
+		// cartVO에서 각 인스턴스 변수를 읽어서 출력
+					System.out.print(cartVO.getUserName() + "\t");
+					System.out.printf("%s\t", cartVO.getProductName());
+					System.out.printf("%s\t", cartVO.getQty());
+					System.out.printf("%s\t", cartVO.getPrice());
+					System.out.printf("%s\n", cartVO.getTotal());
+				
+	}
+	
+	
 	@Override
 	public void printAllCart() {
 		// TODO 장바구니 전체 보기
+		
+		this.printHeader();
+		
+		
+		//카트리스트의 상품개수를 계산하여 nSize에 저장
+		int nSize = cartList.size();
+		for(int i = 0; i < nSize ; i++) {
+			//카트리스트의 i번쨰에 들어있는 요소를 끄집어내서 그요소에 cartVO을 넣는다.
+			//cartList.get(i) 는
+			// 카트리스트에 저장되어있는 i번째 요소
+			// 이 요소는 결국 CartVO 클래스로 만든 객체
+			
+			//System.out.print(cartList.get(i).getUserName() + "\t");
+			//System.out.print(cartList.get(i).getProductName() + "\t");
+			
+			//cartList의 i번째 요소를 getter하여
+			//임시(for()명령 내에 있기때문에) 선언된
+			//CartVO 클래스의 cartVO 객체에  저장하라
+			CartVO cartVO = cartList.get(i);
+			this.printBody(cartVO);
+		}
+		System.out.println(Values.sLine);
 
 	}
 
 	@Override
 	public void printUserCart() {
-		// TODO 구매자별 장바구니 보기
+		System.out.println(Values.dLine);
+		System.out.println("구매자별 리스트");
+		System.out.print("구매자명 >>");
+		String strUserName = scan.nextLine();
+		
+		this.printHeader();
+		int nSize = cartList.size();
+		for(int i = 0; i < nSize; i++) {
+			CartVO cartVO = cartList.get(i);
+			if(cartVO.getUserName().equals(strUserName)) {
+				this.printBody(cartVO);
+			}
+		}
+		
 
 	}
 
