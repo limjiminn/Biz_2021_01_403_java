@@ -5,12 +5,13 @@ import java.util.Scanner;
 import com.callor.shop.service.MenuService;
 
 public class MenuServiceV1 implements MenuService {
-	//인스턴스 변수 선언
+	//Scanner 클래스를 이용해서 scan 객체선언
 	private Scanner scan;
 
 	public MenuServiceV1() {
 		//클래스 생성자에 인스턴스 변수 초기화
 		scan = new Scanner(System.in);
+		// scan 객체 초기화/생성
 	}
 
 	// 메뉴를 보여주고 장바구니에 상품을 추가합니다.
