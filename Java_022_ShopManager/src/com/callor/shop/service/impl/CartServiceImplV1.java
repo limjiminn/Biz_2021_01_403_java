@@ -9,8 +9,21 @@ import com.callor.shop.service.CartService;
 import com.callor.shop.values.Values;
 
 public class CartServiceImplV1 implements CartService {
-
-	private List<CartVO> cartList;
+	/*
+	 * implV1에서 inputCart() method를 사용하여
+	 * cartList에 상품리스트를 추가하고
+	 * 
+	 * ImplV1을 상속받은 ImplV2의
+	 * 새로운 save...() method에서
+	 * cartList에 저장된 데이터를 사용하려고 시도했다
+	 * 
+	 * 이러한 경우에
+	 * private으로 선언된 변수는 서로 공유가 되지 않는다.
+	 * 상속받은 클래스의 method에서 변수(객체)를 서로 공유하려면
+	 * 부모글래스에서 변수(객체)를 반드시 protected로 선언해 주어야한다
+	 * 또한 상속받은 클래스에서는 해당변수(객체)를 선언 해서는 안된다.
+	 */
+	protected List<CartVO> cartList;
 	private final Scanner scan;
 
 	public CartServiceImplV1() {
