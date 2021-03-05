@@ -9,7 +9,7 @@ import com.callor.shop.values.Values;
 public class CartEx_01 {
 	public static void main(String[] args) {
 
-		// 클래수로 선언, 클래서로 생성
+		// 클래스로 선언, 클래스로 생성
 		MenuServiceImplV1 ms = new MenuServiceImplV1();
 
 		// 인터페이스로 선언, 클래스로 생성
