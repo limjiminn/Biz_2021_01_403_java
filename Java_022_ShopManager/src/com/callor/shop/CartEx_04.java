@@ -1,6 +1,9 @@
 package com.callor.shop;
 
+import java.util.Scanner;
+
 import com.callor.shop.model.CartVO;
+
 
 public class CartEx_04 {
 
@@ -18,6 +21,8 @@ public class CartEx_04 {
 		CartVO vo2 = new CartVO("홍길동","신라면", 20, 500);
 		//이런 문제점이있다..
 		CartVO vo3 = new CartVO("칠성사이다","성춘향", 20, 500);
+		//매개변수가 있는 생성자 일 것이다
+		Scanner scan = new Scanner(System.in);
 
 	}
 
