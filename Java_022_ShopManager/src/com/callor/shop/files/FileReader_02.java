@@ -56,7 +56,7 @@ public class FileReader_02 {
 			e.printStackTrace();
 		}
 		//파일 읽기 끝
-		
+
 		for(String str : strLines) {
 			
 			String[] scores = str.split(":");
