@@ -1,6 +1,6 @@
 package com.callor.score.service;
 
-public interface CartService {
+public interface ScoreService {
 	
 	public void makeScore();
 	
