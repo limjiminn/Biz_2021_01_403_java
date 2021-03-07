@@ -1,10 +1,6 @@
 package com.callor.score.service.impl;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,52 +82,35 @@ public class ScoreServiceImplV1 implements ScoreService {
 	// 파일로부터 성적출력--------------------------------
 	public void loadScoreFromFile() {
 
-		// 파일을 읽을때 사용하는 클래스
-		FileReader fileReader = null;
-		
-		try {
-			
-			fileReader = new FileReader(fileName);
-
-			fileReader.close();
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-		} // 파일 읽기 끝
-
+	
 		// scoreList에 저장된값들을 차례대로 가져와서
-		// vo에 넣어라
-		for (ScoreVO vo : scoreList) {
-			int sum = vo.getKor();
-			sum += vo.getEng();
-			sum += vo.getMath();
-			sum += vo.getMusic();
-			sum += vo.getHistory();
+		// scoreVO에 넣어라
+		for (ScoreVO scoreVO : scoreList) {
+			int sum = scoreVO.getKor();
+			sum += scoreVO.getEng();
+			sum += scoreVO.getMath();
+			sum += scoreVO.getMusic();
+			sum += scoreVO.getHistory();
 
 			float avg = (float) sum / 5;
 			// 합계및 평균 출력
-			vo.setTotal(sum);
-			vo.setAvg(avg);
+			scoreVO.setTotal(sum);
+			scoreVO.setAvg(avg);
 
 		}
 		System.out.println(Values.dLine);
 		System.out.println("순번\t국어\t영어\t수학\t음악\t국사\t총점\t평균");
 		System.out.println(Values.sLine);
 
-		for (ScoreVO vo : scoreList) {
-			System.out.print(vo.getUserNum() + "\t");
-			System.out.print(vo.getKor() + "\t");
-			System.out.print(vo.getEng() + "\t");
-			System.out.print(vo.getMath() + "\t");
-			System.out.print(vo.getMusic() + "\t");
-			System.out.print(vo.getHistory() + "\t");
-			System.out.print(vo.getTotal() + "\t");
-			System.out.print(vo.getAvg() + "\n");
+		for (ScoreVO scoreVO : scoreList) {
+			System.out.print(scoreVO.getUserNum() + "\t");
+			System.out.print(scoreVO.getKor() + "\t");
+			System.out.print(scoreVO.getEng() + "\t");
+			System.out.print(scoreVO.getMath() + "\t");
+			System.out.print(scoreVO.getMusic() + "\t");
+			System.out.print(scoreVO.getHistory() + "\t");
+			System.out.print(scoreVO.getTotal() + "\t");
+			System.out.print(scoreVO.getAvg() + "\n");
 		}
 		System.out.println(Values.dLine);
 
