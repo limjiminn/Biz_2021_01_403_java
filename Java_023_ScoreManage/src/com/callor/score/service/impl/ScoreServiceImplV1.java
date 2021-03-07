@@ -16,7 +16,6 @@ import com.callor.score.values.Values;
 
 public class ScoreServiceImplV1 implements ScoreService {
 
-	
 	private List<ScoreVO> scoreList;
 	private String fileName;
 
@@ -28,9 +27,10 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	// 성적 만들기----------------------------------------
 	public void makeScore() {
-
+		// 랜덤클래스 선언
 		Random rnd = new Random();
 
+		// 각각의 과목에 20개의 랜덤점수 저장
 		for (int i = 0; i < 20; i++) {
 
 			ScoreVO scoreVO = new ScoreVO();
@@ -44,54 +44,55 @@ public class ScoreServiceImplV1 implements ScoreService {
 			scoreList.add(scoreVO);
 
 		}
-		
-		
+
 	}
 
 	// 성적 저장하기---------------------------------------------
 	public void saveScoreToFile() {
-		
-		FileWriter fileWriter = null;
-		PrintWriter printWriter = null;
+		// 파일에 데이터를 저장하기위해 2개의 클래스를 객체로 선언
+		FileWriter fileWriter = null; // 파일생성
+		PrintWriter printer = null; // 파일저장
 
+		// try_catch를 의무적용해야한다.
+		// exception이 발생하는 상황이 많음
 		try {
 			fileWriter = new FileWriter(fileName);
-			printWriter = new PrintWriter(fileWriter);
 
-			int nSize = scoreList.size();
-			for (int i = 0; i < nSize; i++) {
-				ScoreVO scoreVO = scoreList.get(i);
-				printWriter.print(scoreVO.getUserNum());
-				printWriter.print(scoreVO.getKor());
-				printWriter.print(scoreVO.getEng());
-				printWriter.print(scoreVO.getMath());
-				printWriter.print(scoreVO.getMusic());
-				printWriter.println(scoreVO.getHistory());
+			// fileWriter를 printWriter와 연결
+			printer = new PrintWriter(fileWriter);
+
+			// scoreList에 성적이 20개씩 저장됨
+			// int nSize = scoreList.size();
+			for (ScoreVO scoreVO : scoreList) {
+				// ScoreVO scoreVO = scoreList.get(i);
+				printer.print(scoreVO.getUserNum());
+				printer.print(scoreVO.getKor());
+				printer.print(scoreVO.getEng());
+				printer.print(scoreVO.getMath());
+				printer.print(scoreVO.getMusic());
+				printer.println(scoreVO.getHistory());
 
 			}
-
-			printWriter.close();
+			// 파일에 내용을 기혹한 후에는 반드시 close()
+			printer.close();
 			fileWriter.close();
-
+			System.out.println("저장완료");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 	// 파일로부터 성적출력--------------------------------
 	public void loadScoreFromFile() {
+
+		// 파일을 읽을때 사용하는 클래스
 		FileReader fileReader = null;
-		BufferedReader buffer = null;
-
-		// 파일을 읽어 들여서 한줄씩 scoreString에 담기
+		
 		try {
-			fileReader = new FileReader(fileName);
-			buffer = new BufferedReader(fileReader);
-
 			
-			buffer.close();
+			fileReader = new FileReader(fileName);
+
 			fileReader.close();
 
 		} catch (FileNotFoundException e) {
@@ -100,10 +101,11 @@ public class ScoreServiceImplV1 implements ScoreService {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
-		// 합계및 평균 출력
+
+		} // 파일 읽기 끝
+
+		// scoreList에 저장된값들을 차례대로 가져와서
+		// vo에 넣어라
 		for (ScoreVO vo : scoreList) {
 			int sum = vo.getKor();
 			sum += vo.getEng();
@@ -112,7 +114,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 			sum += vo.getHistory();
 
 			float avg = (float) sum / 5;
-
+			// 합계및 평균 출력
 			vo.setTotal(sum);
 			vo.setAvg(avg);
 

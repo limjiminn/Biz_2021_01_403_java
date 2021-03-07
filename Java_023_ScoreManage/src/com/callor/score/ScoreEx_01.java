@@ -6,7 +6,7 @@ import com.callor.score.service.impl.MenuServiceImplV1;
 import com.callor.score.service.impl.ScoreServiceImplV1;
 import com.callor.score.values.Values;
 
-public class CartEx_01 {
+public class ScoreEx_01 {
 	public static void main(String[] args) {
 		
 		MenuService mService = new MenuServiceImplV1();
@@ -28,7 +28,6 @@ public class CartEx_01 {
 			}
 		}
 		
-		mService.selectMenu();
 	}
 
 }

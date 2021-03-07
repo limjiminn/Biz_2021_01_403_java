@@ -37,6 +37,8 @@ public class FileReader_02 {
 
 			buffer = new BufferedReader(fileReader); // 임시저장
 			while (true) {
+				// BufferedReader는 받는데이터가 String으로 고정되있음
+				// String이 아닌 다른타입으로 입력을 받기위한 형변환
 				String str = buffer.readLine(); // nextLine()
 				if (str == null) {
 					break;
