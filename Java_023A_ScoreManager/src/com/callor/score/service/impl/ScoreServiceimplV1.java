@@ -213,8 +213,7 @@ public class ScoreServiceimplV1 implements ScoreService {
 				if(voI.getStNum().compareTo(voJ.getStNum()) > 0) {
 					ScoreVO tVo = scoreList.get(i);
 					scoreList.set(i, scoreList.get(j));
-					scoreList.set(j,tVo);
-					
+					scoreList.set(j,tVo);		
 				}
 			}
 		}
