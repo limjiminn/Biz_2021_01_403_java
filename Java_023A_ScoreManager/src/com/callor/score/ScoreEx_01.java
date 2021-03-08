@@ -24,7 +24,7 @@ public class ScoreEx_01 {
 		ssV1.inputScore();
 		ssV1.makeScore();
 		ssV1.saveScoreToFile();
-		ssV1.loadScoreFromFile();
+	//	ssV1.loadScoreFromFile();
 		ssV1.printScore();
 		
 		System.out.println("테스트 코드");
