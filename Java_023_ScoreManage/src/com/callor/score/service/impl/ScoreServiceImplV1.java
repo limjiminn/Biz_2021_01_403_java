@@ -1,5 +1,7 @@
 package com.callor.score.service.impl;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -43,8 +45,9 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	}
 
-	// 성적 저장하기---------------------------------------------
+	// 파일에 성적 저장하기---------------------------------------------
 	public void saveScoreToFile() {
+		
 		// 파일에 데이터를 저장하기위해 2개의 클래스를 객체로 선언
 		FileWriter fileWriter = null; // 파일생성
 		PrintWriter printer = null; // 파일저장
@@ -57,10 +60,10 @@ public class ScoreServiceImplV1 implements ScoreService {
 			// fileWriter를 printWriter와 연결
 			printer = new PrintWriter(fileWriter);
 
-			// scoreList에 성적이 20개씩 저장됨
-			// int nSize = scoreList.size();
+			
 			for (ScoreVO scoreVO : scoreList) {
-				// ScoreVO scoreVO = scoreList.get(i);
+				
+				
 				printer.print(scoreVO.getUserNum());
 				printer.print(scoreVO.getKor());
 				printer.print(scoreVO.getEng());
@@ -69,7 +72,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 				printer.println(scoreVO.getHistory());
 
 			}
-			// 파일에 내용을 기혹한 후에는 반드시 close()
+			// 파일에 내용을 기록한 후에는 반드시 close()
 			printer.close();
 			fileWriter.close();
 			System.out.println("저장완료");
@@ -81,11 +84,22 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	// 파일로부터 성적출력--------------------------------
 	public void loadScoreFromFile() {
-
-	
+		
+		FileReader fileReader = null;
+		BufferedReader buffer = null;
+		
+		try {
+			fileReader = new FileReader(fileName);
+			buffer = new BufferedReader(fileReader);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
 		// scoreList에 저장된값들을 차례대로 가져와서
 		// scoreVO에 넣어라
 		for (ScoreVO scoreVO : scoreList) {
+			
 			int sum = scoreVO.getKor();
 			sum += scoreVO.getEng();
 			sum += scoreVO.getMath();
@@ -110,7 +124,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 			System.out.print(scoreVO.getMusic() + "\t");
 			System.out.print(scoreVO.getHistory() + "\t");
 			System.out.print(scoreVO.getTotal() + "\t");
-			System.out.print(scoreVO.getAvg() + "\n");
+			System.out.println(scoreVO.getAvg());
 		}
 		System.out.println(Values.dLine);
 
