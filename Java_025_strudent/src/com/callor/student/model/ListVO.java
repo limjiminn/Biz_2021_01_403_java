@@ -3,12 +3,14 @@ package com.callor.student.model;
 public class ListVO {
 
 	private int stuNum; //학번
-	private String stuName; //학생이름
-	private String depart;	//학과
 	private int grade;	//학년
 	private int intClass; //반
+	
+	private String stuName; //학생이름
+	private String depart;	//학과
 	private String adress; //주소
 	private String phone;  //전화번호
+	
 	public int getStuNum() {
 		return stuNum;
 	}
