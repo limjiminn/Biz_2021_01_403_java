@@ -8,7 +8,9 @@ public class Ex_04 {
 		//배열 10개를 선언
 		StudentVO[] stdArray = new StudentVO[10];
 		//배열을 선언만하고 초기화를 안시켯다.
-		int intdex = 2;
+		
+		
+		int index = 2;
 		
 		stdArray[index] = new StudentVO();
 		for(int i = 0; i < stdArray.length; i++) {
@@ -18,8 +20,8 @@ public class Ex_04 {
 		stdArray[index].setStName("홍길동");
 		stdArray[index].setStNum("0001");
 		
-		System.out.println("이름 :" + stdArray[index].setStName());
-		System.out.println("이름 :" + stdArray[index].setStNum());
+		System.out.println("이름 : " + stdArray[index].getStName());  //set말고 get
+		System.out.println("이름 : " + stdArray[index].getStNum());
 	}
 
 }

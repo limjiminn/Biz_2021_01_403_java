@@ -19,7 +19,7 @@ public class StudentServiceImplV3 extends StudentServiceImplV1 {
 			String strName = scan.nextLine();
 			
 			// vo로 선언하고 null로 clear하라
-			StudentVO sVO = null;;
+			StudentVO sVO = null;
 			for(StudentVO vo : stdList) {
 				
 				if(strName.equals(vo.getStName())) {
