@@ -28,8 +28,17 @@ public class StudentServiceImplV2 extends StudentServiceImplV1{
 			}
 			boolean bYesSearch = false;
 			for(StudentVO sVO : stdList) {
-				
+				if(strName.equals(sVO.getStName())) {
+					bYesSearch = true;
+					this.printStVO(sVO); //출력하고
+					break; //중단하고
+				}
 			}
+			//못찾았으면...
+			if(!bYesSearch) {
+				System.out.println(strName + "학생은 없음");
+			}
+				
 		}
 		
 	}
