@@ -38,17 +38,21 @@ public class ScoreServiceimplV1 implements ScoreService {
 	}
 
 	/*
-	 * Random 클래스를 사용하여 점수 생성 랜덤 클래스사용한느곳은 makeScore뿐이다 그러므로 makeScore내에서 선언한다.
+	 * Random 클래스를 사용하여 점수 생성 랜덤 클래스사용한느곳은 
+	 * makeScore뿐이다 그러므로 makeScore내에서 선언한다.
 	 */
 	@Override
 	public void makeScore() {
 		/*
-		 * makeScore()는 호출될때마다 20개씩 데이터를 생성하여 추가한다. 이전에 저장된 데이터가 있더라도 계속 추가된다. list.
-		 * remove(위치주소) list에 담긴 특정위치의 항목을 삭제
+		 * makeScore()는 호출될때마다 20개씩 데이터를 생성하여 추가한다.
+		 *  이전에 저장된 데이터가 있더라도 계속 추가된다. 
+		 *  list.remove(위치주소) list에 담긴 특정위치의 항목을 삭제
 		 * 
-		 * list.removeAll(다른리스트) list에 담긴 데이터중 다른 리스트에 포함된 데이터들을 모두 삭제하라
+		 * list.removeAll(다른리스트) list에 담긴 데이터중
+		 *  다른 리스트에 포함된 데이터들을 모두 삭제하라
 		 * 
-		 * 트릭을 사용한다. scoreList에 담긴 데이터들 중에서 자신의 데이터와 일치하는 값들 모두를 삭제하라
+		 * 트릭을 사용한다.
+		 *  scoreList에 담긴 데이터들 중에서 자신의 데이터와 일치하는 값들 모두를 삭제하라
 		 */
 		scoreList.removeAll(scoreList); // 20이상 추가 안되게함
 		// scoreList = new ArrayList(scoreVO);

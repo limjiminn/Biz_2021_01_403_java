@@ -3,9 +3,7 @@ package com.com.iolist.service.impl;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,47 +20,6 @@ public class IolistServiceImplV1 implements IolistService{
 		ioList = new ArrayList<IoListVO>();
 	}
 	
-	//정보담기
-	public void inputInfo() {
-		//매입금액/판매금액 구분후 담기	
-		IoListVO vo = new IoListVO();
-		IoListVO scores[] = new IoListVO[10];
-		
-		
-		
-	
-		
-		
-		
-		
-		
-	}
-	
-	
-	//정보 파일에 저장
-	public void saveInfo() {
-		FileWriter fileWriter = null;
-		PrintWriter printer = null;
-		
-			try {
-				fileWriter = new FileWriter(fileName);
-				printer = new PrintWriter(fileWriter);
-				
-				
-			for(IoListVO vo : ioList) {
-				printer.print(vo.getDealDate());
-				printer.print(vo.getProName());
-				printer.print(vo.ge);
-			}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-	}
-	
-	
-	
 	
 	//정보 파일 읽기
 	public void readInfo() {
@@ -75,20 +32,42 @@ public class IolistServiceImplV1 implements IolistService{
 			buffer = new BufferedReader(fileReader);
 			
 			while(true) {
+				
 				String reader = buffer.readLine();
 				if(reader == null) {
 					break;
 				}
-				
 				String scores[] = reader.split(",");
+				IoListVO vo = new IoListVO();
+				
+				
+				
+				ioList.add(vo);
 			}
+			buffer.close();
+			fileReader.close();
+			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
+	
+	public void printList() {
+		
+		System.out.println();
+		System.out.println("거래일자\t거래처\t상품명\t매입금액\t판매금액");
+		System.out.println();
+		
+		for(IoListVO vo : ioList) {
+			System.out.println(vo.getDealDate() + "\t");
+			System.out.println(vo.getAccout() + "\t");
+			System.out.println(vo.getProName() + "\t");
+			System.out.println(vo.getaPrice() + "\t");
+			System.out.println(vo.getbPrice() + "\t");
+			
+		}
+	}
+	
 }
