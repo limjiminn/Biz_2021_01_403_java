@@ -9,11 +9,12 @@ public class Ex_09 {
 
 	public static void main(String[] args) {
 		
-		List<StudentVO> stdList = new ArrayList<StudentVO>();
+		List<StudentVO> stdList = null;
+		stdList = new ArrayList<StudentVO>();
 		for(int i = 0; i < 10 ; i++) {
 			
-			StudentVO stdVO = new StudentVO(); //해결
-			
+			StudentVO stdVO = null; //해결
+			stdVO = new StudentVO();
 			stdVO.setStName("홍길동");
 			stdVO.setStNum("0001");
 			

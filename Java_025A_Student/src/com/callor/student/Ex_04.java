@@ -20,7 +20,7 @@ public class Ex_04 {
 		stdArray[index].setStName("홍길동");
 		stdArray[index].setStNum("0001");
 		
-		System.out.println("이름 : " + stdArray[index].getStName());  //set말고 get
+		System.out.println("이름 : " + stdArray[index].getStName());  
 		System.out.println("이름 : " + stdArray[index].getStNum());
 	}
 
