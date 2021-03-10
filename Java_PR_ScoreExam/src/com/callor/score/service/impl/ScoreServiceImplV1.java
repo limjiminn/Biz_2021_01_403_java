@@ -111,13 +111,13 @@ public class ScoreServiceImplV1 implements ScoreService {
 					System.out.println("1 ~ 100 범위내에 입력");
 				}
 			}
-
-			ScoreVO vo = new ScoreVO();
+			System.out.println();
 			vo.setStuNum(num);
 			vo.setKor(kor);
 			vo.setEng(eng);
 			vo.setMath(math);
 			vo.setMusic(music);
+			
 			scoreList.add(vo);
 		}
 
@@ -198,7 +198,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 			total += vo.getMath();
 			total += vo.getMusic();
 
-			float avg = (float) total / 5;
+			float avg = (float) total / 4;
 
 			vo.setTotal(total);
 			vo.setAvg(avg);

@@ -18,6 +18,7 @@ public class ScoreVO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public ScoreVO(int stuNum, int kor, int eng, int math, int music) {
 		super();
 		this.stuNum = stuNum;
